@@ -14,6 +14,7 @@ export interface CarCardProps {
 export interface RentableCar {
     id: string;
     car: {
+      id: string;
       name: string;
       type: string;
       primaryImageUrl: string;

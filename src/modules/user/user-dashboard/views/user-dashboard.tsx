@@ -3,8 +3,6 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import ProfilePage from "../components/profile-section/profile-section";
-import { bookings } from "../../../../../public/data/booking-data";
-import styles from "./user-dashboard.module.css";
 
 const DashboardPage = () => {
   const router = useRouter(); // For redirecting to another page

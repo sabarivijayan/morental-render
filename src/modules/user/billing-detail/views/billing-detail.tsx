@@ -17,7 +17,7 @@ import Swal from "sweetalert2"; // Library for displaying alerts
 
 const BillingDetailPage = () => {
   const [rentalDays, setRentalDays] = useState(1); // State to track the number of rental days
-  const { id } = useParams(); // Get the car ID from URL parameters
+  const { id } = useParams() as {id: string}; // Get the car ID from URL parameters
   const router = useRouter(); // Next.js router for navigation
   const [carData, setCarData] = useState<CarData | null>(null); // State to hold car data
   const [isBillingInfoComplete, setBillingInfoComplete] = useState(false); // State to track billing info completion

@@ -1,0 +1,216 @@
+.summaryContainer {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Full width for responsiveness */
+    max-width: 492px; /* Max width for large screens */
+    height: auto; /* Allow the container to adapt to content size */
+    box-sizing: border-box;
+  }
+  
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #6b6b6b;
+    margin-bottom: 16px;
+  }
+  
+  .carInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .carImage {
+    border-radius: 8px;
+    padding-right: 24px;
+    width: 100px; /* Fixed width for image responsiveness */
+    height: auto;
+  }
+  
+  .carDetails {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .carName {
+    font-size: 24px;
+    font-weight: 800;
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .stars {
+    font-size: 14px;
+    color: #ffc107;
+  }
+  
+  .reviews {
+    font-size: 12px;
+    color: #6b6b6b;
+    margin-left: 8px;
+  }
+  
+  .pricing {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 16px;
+    margin-top: 16px;
+  }
+  
+  .priceRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .promoSection {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+  }
+  
+  .promoInput {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-right: 8px;
+  }
+  
+  .applyButton {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .totalPrice {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .price {
+    color: #1f8e46;
+  }
+  
+  .footerText {
+    font-size: 12px;
+    color: #6b6b6b;
+    margin-top: 8px;
+  }
+  
+  /* Responsive design for tablets */
+  @media (max-width: 1024px) {
+    .summaryContainer {
+      padding: 20px;
+      max-width: 100%; /* Full width on tablets */
+    }
+  
+    .title {
+      font-size: 16px; /* Slightly smaller title */
+    }
+  
+    .carName {
+      font-size: 20px; /* Smaller car name */
+    }
+  
+    .totalPrice {
+      font-size: 16px; /* Smaller total price */
+    }
+  
+    .priceRow,
+    .promoInput,
+    .applyButton {
+      font-size: 13px; /* Slightly smaller input and button text */
+    }
+  }
+  
+  /* Responsive design for mobile phones */
+  @media (max-width: 768px) {
+    .summaryContainer {
+      padding: 16px; /* Less padding on mobile */
+    }
+  
+    .carInfo {
+      flex-direction: column; /* Stack car image and details vertically */
+      align-items: flex-start;
+    }
+  
+    .carImage {
+      width: 80px; /* Smaller car image */
+      padding-right: 0;
+      margin-bottom: 12px; /* Add space between image and details */
+    }
+  
+    .carName {
+      font-size: 18px; /* Smaller car name */
+    }
+  
+    .title,
+    .totalPrice {
+      font-size: 16px; /* Smaller title and price */
+    }
+  
+    .promoInput {
+      padding: 8px;
+      font-size: 12px; /* Smaller input */
+    }
+  
+    .applyButton {
+      padding: 8px;
+      font-size: 12px; /* Smaller button */
+    }
+  
+    .priceRow {
+      font-size: 12px; /* Smaller text for pricing rows */
+    }
+  
+    .footerText {
+      font-size: 10px; /* Smaller footer text */
+    }
+  }
+  
+  /* Responsive design for very small screens */
+  @media (max-width: 480px) {
+    .summaryContainer {
+      padding: 12px;
+    }
+  
+    .title {
+      font-size: 14px;
+    }
+  
+    .carName {
+      font-size: 16px;
+    }
+  
+    .promoInput,
+    .applyButton,
+    .priceRow {
+      font-size: 11px;
+    }
+  
+    .totalPrice {
+      font-size: 14px;
+    }
+  
+    .footerText {
+      font-size: 9px;
+    }
+  }
+  

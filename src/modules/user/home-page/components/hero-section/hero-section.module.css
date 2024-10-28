@@ -1,0 +1,162 @@
+.heroSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 64px;
+    gap: 32px; /* Maintain the 32px gap between the two cards */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    width: 100%; /* Ensure the section takes full width */
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.card {
+    border-radius: 12px;
+    width: calc(50% - 16px); /* 50% of container width minus half the gap (32px / 2) */
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.cardContent {
+    flex: 1;
+}
+
+.title {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 10px;
+    line-height: 150%;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.description {
+    color: white;
+    margin-bottom: 16px;
+    line-height: 150%;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.rentButton {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.carImageWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.carImage {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Specific background for the first card */
+.cardOne {
+    background-image: url('/icons/Ads 1.svg');
+}
+
+/* Specific background for the second card */
+.cardTwo {
+    background-image: url('/icons/Ads 2.svg');
+}
+
+/* Styling buttons differently */
+.button1 {
+    background-color: #3366ff;
+}
+
+.button2 {
+    background-color: #54A6FF;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* On smaller screens, stack the cards vertically */
+@media (max-width: 1024px) {
+    .heroSection {
+        flex-direction: column;
+        padding: 32px 32px; /* Reduced padding on smaller screens */
+        gap: 32px; /* Maintain 32px gap between stacked cards */
+    }
+
+    .card {
+        width: 100%; /* Cards take full width when stacked */
+        height: auto; /* Adjust height based on content */
+        margin-bottom: 32px; /* Add 32px margin between stacked cards */
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .rentButton {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .carImageWrapper {
+        justify-content: center; /* Center the car image */
+    }
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        padding: 16px 16px;
+        gap: 32px; /* Keep the gap between cards consistent */
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .rentButton {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroSection {
+        padding: 10px 10px;
+        gap: 32px; /* Keep the gap */
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .rentButton {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    .carImageWrapper {
+        justify-content: center; /* Ensure the car image is centered */
+    }
+}

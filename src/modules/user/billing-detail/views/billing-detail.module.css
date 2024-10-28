@@ -1,0 +1,139 @@
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 32px;
+  gap: 32px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.leftColumn {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  min-width: 60%;
+  box-sizing: border-box;
+  order: 2;
+  overflow-x: scroll;
+  max-height: 536px;
+  padding: 10px;
+}
+
+.leftColumn::-webkit-scrollbar {
+  display: none;
+}
+
+.rightColumn {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  order: 1;
+  padding-top: 10px;
+}
+
+.rentButtonContainer {
+  margin-top: 32px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.rentButton {
+  background-color: #3563E9;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.rentButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.rentButton:not(:disabled):hover {
+  background-color: #2a51c7;
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .leftColumn,
+  .rightColumn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .rightColumn {
+    margin-bottom: 32px;
+  }
+
+  .leftColumn {
+    order: 2;
+  }
+
+  .rightColumn {
+    order: 1;
+  }
+}
+
+/* Small Screens (Mobile Landscape) */
+@media (max-width: 768px) {
+  .container {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .leftColumn {
+    max-height: none; /* Remove max height constraint for smaller screens */
+    row-gap: 24px;
+    padding: 8px;
+  }
+
+  .rightColumn {
+    padding-top: 8px;
+  }
+
+  .rentButton {
+    font-size: 14px;
+    padding: 10px 20px; /* Smaller button for smaller screens */
+  }
+}
+
+/* Extra Small Screens (Mobile Portrait) */
+@media (max-width: 480px) {
+  .container {
+    padding: 40px 16px 16px 16px;
+    gap: 16px;
+  }
+
+  .leftColumn {
+    min-width: 100%;
+    row-gap: 16px;
+    padding: 4px;
+  }
+
+  .rightColumn {
+    padding-top: 4px;
+    margin-bottom: 16px;
+  }
+
+  .rentButton {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}

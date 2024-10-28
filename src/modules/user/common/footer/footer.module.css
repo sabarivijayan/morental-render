@@ -1,0 +1,127 @@
+.footer {
+    background-color: #fff;
+    padding: 2rem 0;
+    border-top: 1px solid #eaeaea;
+  }
+  
+  /* Updated padding for footerContainer */
+  .footerContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 64px; /* Same padding as bottomBar */
+  }
+  
+  .logoSection {
+    flex: 1;
+    margin-right: 2rem;
+    min-width: 200px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3461ff;
+  }
+  
+  .description {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #555;
+  }
+  
+  .linksSection {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    min-width: 150px;
+  }
+  
+  .column h4 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .column ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .column ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: #555;
+  }
+  
+  /* Updated bottom bar */
+  .bottomBar {
+    margin-top: 2rem;
+    padding: 1rem 64px; /* Ensure padding on the left and right */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+    font-weight: bold; /* Bold content */
+    position: relative;
+  }
+  
+  /* Ensure the border doesn't extend across the entire width */
+  .bottomBar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 64px;
+    right: 64px;
+    border-top: 1.5px solid #eaeaea; /* Shortened border */
+  }
+  
+  .policyLinks {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* Responsive Design */
+  
+  @media (max-width: 768px) {
+    .footerContainer {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 2rem; /* Adjust padding for smaller screens */
+    }
+  
+    .linksSection {
+      margin-top: 2rem;
+    }
+  
+    .bottomBar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 2rem; /* Adjust padding for smaller screens */
+    }
+  
+    .policyLinks {
+      margin-top: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 1.2rem;
+    }
+  
+    .column h4 {
+      font-size: 0.9rem;
+    }
+  
+    .column ul li {
+      font-size: 0.75rem;
+    }
+  }
+  

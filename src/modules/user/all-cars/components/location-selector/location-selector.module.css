@@ -1,0 +1,270 @@
+
+/* location-selector.module.css */
+.container {
+  display: flex;
+  position: relative; /* Add relative positioning to the container for the button positioning */
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  box-sizing: border-box;
+  max-width: 100%; /* Prevent overflow */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  overflow-x: hidden; /* Ensure no horizontal scroll */
+}
+
+.formGroup {
+  width: 100%;
+  max-width: calc(45% - 0px); /* Reduced width to ensure they fit side by side */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.labelContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+/* Breathing Effect */
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes breathing2 {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+}
+
+/* Original Styling */
+.radioIndicator {
+  position: relative;
+  left: -2.5px;
+  width: 8px;
+  height: 8px;
+  background-color: #3461ff;
+  border-radius: 50%;
+  animation: breathing 2s ease-in-out infinite;
+}
+
+.radioIndicator2 {
+  position: absolute;
+  top: 10;
+  left: -7.6px;
+  width: 16px;
+  height: 16px;
+  background-color: #3563e9;
+  opacity: 0.3;
+  border-radius: 50%;
+  animation: breathing2 2.5s ease-in-out infinite;
+}
+
+.boldText {
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+}
+
+.formFields {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Reduced gap to save space */
+  margin-top: 0.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input {
+  padding: 0.5rem 0.8rem; /* Reduced padding */
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.8rem; /* Slightly reduced font size */
+  color: #333;
+  width: 100%;
+  max-width: 100px; /* Reduced width to prevent overflow */
+  outline: none;
+  appearance: none;
+}
+
+.inputWithIcon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.inputWithIcon input {
+  border-bottom: 1px solid #ddd;
+}
+
+.inputWithIcon img {
+  cursor: pointer;
+}
+
+.input:focus,
+.inputWithIcon input:focus {
+  border-bottom-color: #3461ff;
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+.divider {
+  width: 1px;
+  height: 50px; /* Reduced height */
+  background-color: #ddd;
+}
+
+.swapButton {
+  background-color: #3461ff;
+  border: none;
+  width: 60px; /* Reduced size of the button */
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 10px; /* Reduced margin to keep it centered */
+  flex-shrink: 0;
+}
+
+.swapButton:hover {
+  background-color: #264ac5;
+}
+
+/* Responsive Design */
+
+/* For screens between 1024px and 1200px */
+@media (max-width: 1200px) {
+  .container {
+    padding: 16px;
+    gap: 20px;
+    justify-content: space-around;
+  }
+
+  .formGroup {
+    max-width: calc(48% - 15px); /* Adjust max width to prevent wrapping */
+    height: auto;
+  }
+}
+
+/* Medium screens (Tablets and small desktops) */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    padding: 0px 16px;
+    gap: 20px;
+  }
+
+  .formGroup {
+    max-width: 500px; /* Use full width for each section */
+    padding: 1rem;
+    justify-content: baseline;
+  }
+
+  .swapButton {
+    margin: 10px auto; /* Center button in between sections */
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
+/* Small screens (Tablets) */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .formGroup {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .swapButton {
+    width: 60px;
+    height: 60px;
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
+/* Extra small screens (Phones) */
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+    gap: 1rem;
+  }
+
+  .formGroup {
+    padding: 0.5rem;
+  }
+
+  .boldText {
+    font-size: 0.85rem;
+  }
+
+  .input {
+    font-size: 0.75rem;
+    padding: 0.3rem;
+    max-width: 90px; /* Ensure inputs fit on smaller screens */
+  }
+
+  .swapButton {
+    width: 45px;
+    height: 45px;
+  }
+}

@@ -1,0 +1,74 @@
+.dashboardContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.avatarContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.uploadButton {
+  display: block;
+  margin: 20px auto;
+}
+
+.tabsContainer {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formContainer {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tableContainer {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .avatarContainer{
+    padding-top: 70px;
+  }
+  .dashboardContainer {
+    padding: 10px;
+  }
+
+  .formContainer {
+    max-width: 100%;
+  }
+
+  .actionButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .actionButtons button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .uploadButton {
+    width: 100%;
+  }
+
+  .tabsContainer {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,73 @@
+/* Base Flex Layout for Desktops */
+.allCarsContainer {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.sidebarContainer {
+  flex: 1; /* Sidebar takes 1/4 of the available width */
+}
+
+.mainContent {
+  flex: 3; /* Main content takes 3/4 of the available width */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pickupForm {
+  margin-bottom: 16px;
+}
+
+.carGridContainer {
+  flex-grow: 1; /* Ensures that the car grid grows to fill the available space */
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+  .allCarsContainer {
+      flex-direction: column; /* Stack the sidebar and main content vertically */
+  }
+
+  .mainContent {
+      gap: 12px; /* Reduced gap for smaller screens */
+  }
+
+  .sidebarContainer {
+      order: 2; /* Sidebar comes after the main content in vertical layout */
+  }
+}
+
+/* Small Screens (Mobile Landscape) */
+@media (max-width: 768px) {
+  .allCarsContainer {
+      flex-direction: column; /* Single-column layout for small screens */
+      padding: 12px; /* Reduced padding */
+      margin-top: 150px; /* Adjust margin to account for the navbar on smaller screens */
+  }
+
+  .mainContent {
+      gap: 12px; /* Slightly reduced gap */
+  }
+
+  .pickupForm {
+      margin-bottom: 12px; /* Less margin for compact layout */
+  }
+}
+
+/* Extra Small Screens (Mobile Portrait) */
+@media (max-width: 480px) {
+  .allCarsContainer {
+      padding: 8px; /* Further reduce padding for small devices */
+      margin-top: 32px; /* Extra margin to avoid navbar overlap */
+  }
+
+  .mainContent {
+      gap: 8px; /* Minimize gap for smaller screens */
+  }
+
+  .pickupForm {
+      margin-bottom: 8px; /* Compact margins */
+  }
+}

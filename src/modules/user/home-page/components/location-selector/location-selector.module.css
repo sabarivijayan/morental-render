@@ -1,0 +1,297 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  justify-content: center;
+  gap: 32px;
+  box-sizing: border-box;
+  max-width: 100%; /* Prevent overflow */
+  flex-wrap: nowrap; /* No wrapping on larger screens to maintain horizontal layout */
+  
+}
+
+/* Each form group (Pick-up or Drop-off) styling */
+.formGroup {
+  width: 100%;
+  max-width: 400px;
+  height: 132px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Styling for sections within each formGroup */
+.section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* Label container for Pick-up and Drop-off titles */
+.labelContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+/* Breathing animation for radio indicators */
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+/* Secondary breathing animation for outer ring */
+@keyframes breathing2 {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+}
+
+/* Radio button styling with animations */
+.radioIndicator {
+  position: relative;
+  left: -2.5px;
+  width: 8px;
+  height: 8px;
+  background-color: #3461ff;
+  border-radius: 50%;
+  animation: breathing 2s ease-in-out infinite;
+}
+
+.radioIndicator2 {
+  position: absolute;
+  top: 10;
+  left: -7.6px;
+  width: 16px;
+  height: 16px;
+  background-color: #3563e9;
+  opacity: 0.3;
+  border-radius: 50%;
+  animation: breathing2 2.5s ease-in-out infinite;
+}
+
+.boldText {
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Form fields for date and time input */
+.formFields {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  padding: 0.6rem 1rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.85rem;
+  color: #333;
+  width: 100%;
+  max-width: 130px;
+  outline: none;
+  appearance: none;
+}
+
+.inputWithIcon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.inputWithIcon input {
+  border-bottom: 1px solid #ddd;
+}
+
+.inputWithIcon img {
+  cursor: pointer;
+}
+
+.input:focus,
+.inputWithIcon input:focus {
+  border-bottom-color: #3461ff;
+}
+
+.input::placeholder {
+  color: #aaa;
+}
+
+/* Divider for separating fields */
+.divider {
+  width: 1px;
+  height: 60px;
+  background-color: #ddd;
+}
+
+/* Swap button styling */
+.swapButton {
+  background-color: #3461ff;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.swapButton:hover {
+  background-color: #264ac5;
+}
+
+/* Responsive Design */
+
+/* For screens between 1024px and 1200px */
+@media (max-width: 1200px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 48px;
+    gap: 30px;
+    justify-content: center; /* Center the content for mid-range screens */
+    flex-wrap: wrap; /* Allow wrapping when necessary */
+  }
+
+  .formGroup {
+    max-width: 450px;
+    height: auto; /* Allow height to adjust based on content */
+    padding: 1rem;
+  }
+
+  .input {
+    font-size: 0.85rem;
+  }
+
+  .boldText {
+    font-size: 1rem;
+  }
+
+  .divider {
+    height: 50px;
+  }
+}
+
+/* Medium screens (Tablets and small desktops) */
+@media (max-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 12px 0;
+    gap: 30px;
+    flex-wrap: wrap; /* Wrap if needed */
+  }
+
+  .formGroup {
+    height: auto;
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .input {
+    font-size: 0.8rem;
+  }
+
+  .boldText {
+    font-size: 0.9rem;
+  }
+
+  .divider {
+    height: 50px;
+  }
+}
+
+/* Small screens (Tablets) */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    padding: 32px;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .formGroup {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .swapButton {
+    width: 50px;
+    height: 50px;
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
+/* Extra small screens (Phones) */
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+    gap: 1rem;
+    flex-direction: column; /* Stack everything vertically on small screens */
+  }
+
+  .formGroup {
+    max-width: 270px;
+    padding: 0.5rem;
+  }
+
+  .boldText {
+    font-size: 0.85rem;
+  }
+
+  .input {
+    font-size: 0.75rem;
+    padding: 0.3rem;
+  }
+
+  .swapButton {
+    width: 45px;
+    height: 45px;
+  }
+}

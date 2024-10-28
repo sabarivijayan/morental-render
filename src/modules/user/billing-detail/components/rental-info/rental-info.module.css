@@ -1,0 +1,257 @@
+/* Container styling */
+.rentalInfoContainer {
+    width: 100%; /* Full width for responsiveness */
+    max-width: 752px; /* Max width to prevent stretching on large screens */
+    height: auto; /* Adjust height automatically */
+    background-color: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box; /* Include padding in the width */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure wrapping if space is limited */
+  }
+  
+  .header h2 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .stepInfo {
+    font-size: 14px;
+    color: #A0AEC0;
+  }
+  
+  .subHeading {
+    font-size: 16px;
+    color: #718096;
+    margin-top: 8px;
+  }
+  
+  .pickUpDropOffContainer {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    margin-bottom: 40px; /* Increased spacing below Pick-Up and Drop-Off */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+  
+  .circleWrapper {
+    margin-right: 12px;
+  }
+  
+  /* Breathing Effect */
+  @keyframes breathing {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+  }
+  
+  @keyframes breathing2 {
+    0% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+  }
+  
+  .outerCircle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgba(92, 175, 252, 0.3); /* Larger circle with 30% opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: breathing2 2.5s ease-in-out infinite;
+  }
+  
+  .innerCircle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #5caffc; /* Smaller circle */
+    animation: breathing 2s ease-in-out infinite;
+  }
+  
+  .label {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Increased gap between fields */
+  }
+  
+  .fieldGroup {
+    flex: 1 1 44%; /* Reduced the width of input fields */
+  }
+  
+  .fieldGroup label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  .fieldGroup select,
+  .fieldGroup input[type="date"],
+  .fieldGroup input[type="time"] {
+    width: 100%;
+    padding: 16px 0 16px 16px;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px; /* Rounder corners for input boxes */
+    font-size: 14px;
+    color: #94a3b8;
+    appearance: none;
+  }
+  
+  .fieldGroup select:focus,
+  .fieldGroup input[type="date"]:focus,
+  .fieldGroup input[type="time"]:focus {
+    border-color: #5caffc;
+    outline: none;
+  }
+  
+  .fieldGroup select::placeholder,
+  .fieldGroup input[type="date"]::placeholder,
+  .fieldGroup input[type="time"]::placeholder {
+    color: #94a3b8;
+  }
+  
+  /* Tablet and smaller screens */
+  @media (max-width: 1024px) {
+    .rentalInfoContainer {
+      padding: 24px; /* Reduce padding on smaller screens */
+    }
+  
+    .header h2 {
+      font-size: 22px; /* Slightly smaller heading */
+    }
+  
+    .fields {
+      gap: 16px; /* Reduce gap between fields */
+    }
+  
+    .fieldGroup {
+      flex: 1 1 48%; /* Make fields take up more width */
+    }
+  
+    .pickUpDropOffContainer {
+      flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    }
+  
+    .label {
+      font-size: 15px;
+    }
+  }
+  
+  /* Mobile screens */
+  @media (max-width: 768px) {
+    .rentalInfoContainer {
+      padding: 16px; /* Further reduce padding for mobile */
+    }
+  
+    .header h2 {
+      font-size: 20px; /* Smaller heading */
+    }
+  
+    .subHeading {
+      font-size: 14px;
+    }
+  
+    .fields {
+      flex-direction: column; /* Stack fields vertically */
+      gap: 12px; /* Reduce gap for smaller screens */
+    }
+  
+    .fieldGroup {
+      flex: 1 1 100%; /* Full width for input fields */
+    }
+  
+    .label {
+      font-size: 14px; /* Adjust label size */
+    }
+  
+    .pickUpDropOffContainer {
+      padding-top: 24px;
+    }
+  
+    .outerCircle {
+      width: 14px;
+      height: 14px;
+    }
+  
+    .innerCircle {
+      width: 7px;
+      height: 7px;
+    }
+  }
+  
+  /* Very small mobile screens */
+  @media (max-width: 480px) {
+    .rentalInfoContainer {
+      padding: 12px; /* Minimal padding for very small screens */
+    }
+  
+    .header h2 {
+      font-size: 18px; /* Adjust heading size */
+    }
+  
+    .subHeading {
+      font-size: 12px; /* Smaller subheading */
+    }
+  
+    .fields {
+      gap: 8px; /* Further reduce gap between fields */
+    }
+  
+    .label {
+      font-size: 12px; /* Adjust label size */
+    }
+  
+    .fieldGroup select,
+    .fieldGroup input[type="date"],
+    .fieldGroup input[type="time"] {
+      padding: 12px 0 12px 12px; /* Smaller padding for inputs */
+      font-size: 12px; /* Smaller font size for inputs */
+    }
+  
+    .outerCircle {
+      width: 12px;
+      height: 12px;
+    }
+  
+    .innerCircle {
+      width: 6px;
+      height: 6px;
+    }
+  }
+  

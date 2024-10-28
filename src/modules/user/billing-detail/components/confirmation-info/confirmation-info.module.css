@@ -1,0 +1,199 @@
+/* Container styling */
+.confirmationContainer {
+    width: 100%; /* Full width for responsiveness */
+    max-width: 752px; /* Max width to prevent stretching on large screens */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+  
+  /* Header with Step Info */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+  
+  .title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .stepInfo {
+    font-size: 1rem;
+    color: #888;
+  }
+  
+  .subtitle {
+    color: #888;
+    margin-bottom: 30px;
+    font-size: 1rem;
+  }
+  
+  /* Terms and Conditions */
+  .terms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #F6F7F9;
+    padding: 16px;
+    border-radius: 12px;
+  }
+  
+  .checkbox {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .termsLabel {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Rent Now Button */
+  .rentButton {
+    width: 150px;
+    padding: 12px 20px;
+    background-color: #0061f2;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .rentButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Security Notice */
+  .securityNotice {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .securityIcon {
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  .securityText {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .securitySubtext {
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive styling for tablet screens */
+  @media (max-width: 1024px) {
+    .confirmationContainer {
+      padding: 20px; /* Reduce padding for smaller screens */
+    }
+  
+    .title {
+      font-size: 1.4rem; /* Slightly reduce the title size */
+    }
+  
+    .stepInfo, .subtitle {
+      font-size: 0.9rem; /* Adjust font size for step info and subtitle */
+    }
+  
+    .rentButton {
+      width: 100%; /* Full-width button on smaller screens */
+      text-align: center;
+    }
+  
+    .termsLabel, .securityText, .securitySubtext {
+      font-size: 0.95rem; /* Slightly reduce font size for terms and security sections */
+    }
+  
+    .securityIcon {
+      width: 24px; /* Smaller security icon */
+    }
+  }
+  
+  /* Responsive styling for mobile screens */
+  @media (max-width: 768px) {
+    .confirmationContainer {
+      padding: 15px; /* Further reduce padding on mobile */
+    }
+  
+    .title {
+      font-size: 1.2rem; /* Reduce title size further */
+    }
+  
+    .stepInfo, .subtitle {
+      font-size: 0.8rem; /* Adjust font size for step info and subtitle */
+    }
+  
+    .terms {
+      flex-direction: column; /* Stack checkbox and label vertically */
+      align-items: flex-start;
+    }
+  
+    .checkbox {
+      margin-bottom: 10px; /* Add margin for better spacing */
+    }
+  
+    .rentButton {
+      width: 100%; /* Full-width button */
+      font-size: 0.95rem;
+    }
+  
+    .termsLabel, .securityText, .securitySubtext {
+      font-size: 0.85rem; /* Further reduce font size */
+    }
+  
+    .securityIcon {
+      width: 20px; /* Smaller security icon */
+    }
+  }
+  
+  /* Responsive styling for very small mobile screens */
+  @media (max-width: 480px) {
+    .confirmationContainer {
+      padding: 10px; /* Minimal padding for small screens */
+    }
+  
+    .title {
+      font-size: 1rem; /* Smaller title */
+    }
+  
+    .stepInfo, .subtitle {
+      font-size: 0.75rem;
+    }
+  
+    .termsLabel {
+      font-size: 0.75rem;
+    }
+  
+    .rentButton {
+      width: 100%; /* Full-width button */
+      font-size: 0.85rem; /* Smaller font size */
+    }
+  
+    .securityText {
+      font-size: 0.85rem;
+    }
+  
+    .securitySubtext {
+      font-size: 0.75rem;
+    }
+  }
+  

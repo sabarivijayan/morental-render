@@ -1,0 +1,171 @@
+/* Base Styles */
+.sidebar {
+  padding: 16px;
+  border-right: 1px solid #eaeaea;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75%;
+  background-color: #fff;
+  z-index: 998; /* Ensure it sits above the other content */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateX(-100%); /* Hidden by default */
+  opacity: 0;
+}
+
+.filterSection {
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: bold;
+  color: #90a3bf;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.filterLabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #1b1d21;
+}
+
+.filterLabel input {
+  margin-right: 8px;
+}
+
+.count {
+  color: #90a3bf;
+  font-size: 12px;
+}
+
+.priceRange {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.priceLabel {
+  font-size: 14px;
+  color: #1b1d21;
+  text-align: right;
+  margin-top: 8px;
+}
+
+/* Filter icon button */
+.filterIcon {
+  display: none;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #3461ff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Sidebar hidden by default */
+.hidden {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* Sidebar visible when active */
+.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Close button inside sidebar */
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Sidebar Content - prevents closing when clicking inside */
+.sidebarContent {
+  height: 100%;
+}
+
+/* Responsive Styling */
+
+/* Large screens (Desktops) */
+/* Large screens (Desktops) */
+@media (min-width: 1025px) { /* Change to 1025px to apply desktop styles above 1024px */
+  .sidebar {
+    transform: translateX(0); /* Ensure sidebar is visible on large screens */
+    opacity: 1;
+    position: sticky; /* Sticky on larger screens */
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+  }
+
+  .filterIcon {
+    display: none; /* Hide filter icon on large screens */
+  }
+
+  .closeButton {
+    display: none; /* No close button needed on desktop */
+  }
+}
+
+/* Tablets and mobile screens */
+@media (max-width: 1024px) { /* Apply mobile styles at exactly 1024px and below */
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 75%;
+    height: 100%;
+    z-index: 999;
+    background-color: #fff;
+    border-right: 1px solid #eaeaea;
+    transform: translateX(-100%); /* Hide the sidebar by default */
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .filterIcon {
+    display: block; /* Show filter icon on mobile/tablet */
+  }
+
+  .closeButton {
+    display: block; /* Show close button in mobile mode */
+  }
+
+  .sidebar.active {
+    transform: translateX(0); /* Sidebar slides in */
+    opacity: 1;
+  }
+
+  .sidebar.hidden {
+    transform: translateX(-100%); /* Sidebar slides out */
+    opacity: 0;
+  }
+}
+
+/* Small Mobile (Portrait mode) */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%; /* Sidebar takes up full width on small mobile */
+  }
+
+  .filterIcon {
+    bottom: 12px; /* Adjust position */
+    right: 12px;
+  }
+}

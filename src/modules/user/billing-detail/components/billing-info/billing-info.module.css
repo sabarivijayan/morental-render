@@ -1,0 +1,179 @@
+.billingFormContainer {
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  
+  width: 100%; /* Make it responsive based on parent container */
+  max-width: 752px; /* Keep a maximum width for larger screens */
+  height: auto; /* Allow height to adjust automatically */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Ensure proper layout if space is limited */
+}
+
+.header h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.stepInfo {
+  font-size: 14px;
+  color: #A0AEC0;
+}
+
+.subHeading {
+  font-size: 16px;
+  color: #718096;
+  margin-top: 8px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #2D3748;
+}
+
+.inputGroup input {
+  padding: 12px;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  background-color: #F7FAFC;
+  font-size: 14px;
+  color: #4A5568;
+}
+
+.inputGroup input::placeholder {
+  color: #A0AEC0;
+}
+
+.buttonContainer{
+  padding-top: 24px;
+}
+/* Button for Edit/Save Changes */
+.editSaveButton {
+  background-color: #3563E9;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer; /* Add space above button */
+  transition: background-color 0.3s ease;
+  width: fit-content; /* Adjusts the button to fit its content */
+}
+
+.editSaveButton:hover {
+  background-color: #2C5282; /* Darken the background on hover */
+}
+
+.editSaveButton:focus {
+  outline: none; /* Remove the outline when focused */
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.6); /* Add a subtle focus ring */
+}
+
+/* Responsive for tablet view */
+@media (max-width: 1024px) {
+  .billingFormContainer {
+    padding: 24px; /* Reduce padding on smaller screens */
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr; /* Switch to single-column layout on smaller screens */
+    gap: 16px; /* Reduce gap for compact view */
+  }
+
+  .header {
+    flex-direction: column; /* Stack the header items */
+    align-items: flex-start;
+    gap: 8px; /* Add space between header and step info */
+  }
+
+  .header h2 {
+    font-size: 20px; /* Reduce heading size */
+  }
+
+  .editSaveButton {
+      margin-top: 16px;
+      width: 100%; /* Full width on smaller screens */
+  }
+}
+
+/* Responsive for mobile view */
+@media (max-width: 768px) {
+  .billingFormContainer {
+    padding: 16px; /* Further reduce padding for mobile */
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr; /* Keep single-column layout */
+    gap: 12px; /* Reduce gap for mobile view */
+  }
+
+  .header h2 {
+    font-size: 18px; /* Smaller heading size for mobile */
+  }
+
+  .subHeading {
+    font-size: 14px; /* Adjust subheading size for mobile */
+  }
+
+  .inputGroup input {
+    font-size: 12px; /* Smaller font size for inputs */
+    padding: 10px; /* Reduce input padding */
+  }
+
+  .editSaveButton {
+      padding: 10px 20px; /* Adjust padding for smaller screens */
+      font-size: 12px; /* Smaller font size for button */
+  }
+}
+
+/* Responsive for very small devices */
+@media (max-width: 480px) {
+  .billingFormContainer {
+    padding: 12px; /* Minimal padding for very small screens */
+  }
+
+  .header h2 {
+    font-size: 16px; /* Adjust heading for very small screens */
+  }
+
+  .subHeading {
+    font-size: 12px; /* Subheading size adjustment */
+  }
+
+  .inputGroup input {
+    font-size: 12px;
+    padding: 8px; /* Smaller padding for inputs */
+  }
+
+  .editSaveButton {
+      padding: 8px 16px; /* Smaller padding for button */
+      font-size: 12px;
+      width: 100%; /* Full width for smallest screens */
+  }
+
+  .stepInfo {
+    font-size: 12px; /* Reduce step info text size */
+  }
+}

@@ -1,0 +1,76 @@
+/* Base Styles for Larger Screens */
+.dashboardContainer {
+  display: flex;
+  justify-content: flex-start;
+  padding: 32px 5%; /* Use percentage-based padding to prevent overflow */
+  background-color: #f7f7f8;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+
+.profileContainer {
+  margin-right: 32px; /* Space between profile and rental sections */
+}
+
+.rentalContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px; /* Limit the maximum width of the container */
+  /* Removed the background-color, border-radius, and box-shadow */
+  padding: 20px; /* Retain padding if needed for spacing */
+  box-sizing: border-box; /* Ensure padding is included in width calculations */
+}
+
+/* Medium screen adjustments (tablets, small laptops) */
+@media (max-width: 1024px) {
+  .dashboardContainer {
+    padding: 32px 32px;
+    flex-direction: column; /* Stack profile and rental sections vertically */
+    align-items: center;
+  }
+  .profileContainer {
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+  .rentalContainer {
+    margin-left: 0;
+    width: 100%; /* Adjust width for better responsiveness */
+    max-width: 700px; /* Adjust for smaller screens */
+    padding: 16px;
+  }
+}
+
+/* Small screen adjustments (mobile devices) */
+@media (max-width: 768px) {
+  .dashboardContainer {
+    
+    padding: 20px 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profileContainer, .rentalContainer {
+    width: 100%;
+  }
+  .rentalContainer {
+    margin-top: 16px;
+    padding: 16px;
+  }
+}
+
+/* Extra small screens (very small mobile devices) */
+@media (max-width: 480px) {
+  .dashboardContainer {
+    padding: 16px;
+    flex-direction: column;
+  }
+  .profileContainer, .rentalContainer {
+    width: 100%;
+  }
+  .rentalContainer {
+    padding: 12px;
+    margin-top: 12px;
+  }
+}

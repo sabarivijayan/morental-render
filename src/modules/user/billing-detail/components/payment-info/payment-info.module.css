@@ -1,0 +1,156 @@
+/* Container styling */
+.paymentContainer {
+  width: 100%;
+  max-width: 752px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+/* Header with Step Info */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.stepInfo {
+  font-size: 1rem;
+  color: #888;
+}
+
+.subtitle {
+  color: #888;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.paymentOption {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.radioInput {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  justify-content: space-between; /* Add this to push the logo to the right */
+  width: 100%; /* Make the label span the full width of the container */
+}
+
+.razorpayLabel {
+  margin-right: auto; /* This ensures the text stays to the left */
+}
+
+.razorpayIcon {
+  margin-left: auto; /* Add this to push the logo to the right end */
+  color: #0d6efd; /* Razorpay blue color */
+  font-size: 1.5rem;
+}
+
+.paymentMessage {
+  font-size: 1rem;
+  color: #555;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Responsive styling for tablet screens */
+@media (max-width: 1024px) {
+  .paymentContainer {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .stepInfo {
+    font-size: 0.9rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive styling for mobile screens */
+@media (max-width: 768px) {
+  .paymentContainer {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .stepInfo {
+    font-size: 0.8rem;
+  }
+
+  .razorpayIcon {
+    font-size: 1.4rem; /* Adjust the icon size for smaller screens */
+  }
+
+  .paymentMessage {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive styling for very small mobile screens */
+@media (max-width: 480px) {
+  .paymentContainer {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .subtitle {
+    font-size: 0.75rem;
+  }
+
+  .stepInfo {
+    font-size: 0.75rem;
+  }
+
+  .razorpayIcon {
+    font-size: 1.2rem;
+  }
+
+  .paymentMessage {
+    font-size: 0.85rem;
+  }
+}

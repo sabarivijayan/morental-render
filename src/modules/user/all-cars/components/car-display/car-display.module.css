@@ -1,0 +1,75 @@
+/* Base Styles */
+.homeContainer {
+  padding: 36px 32px; /* Consistent 64px padding on left and right */
+}
+
+.sectionTitle {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Grid layout for larger screens */
+.carGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row on larger screens */
+  gap: 32px;
+  width: 100%;
+}
+
+/* Each car card container */
+.carItem {
+  display: flex;
+  justify-content: center; /* Center the car card */
+  width: 100%;
+}
+
+/* Responsive Design */
+
+/* Large screens (Desktop and above) */
+@media (min-width: 1024px) {
+  .sectionTitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Medium screens (Tablets and small desktops) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .carGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for tablets */
+  }
+
+  .homeContainer {
+    padding: 32px 32px; /* Reduce padding on medium screens */
+  }
+
+  .sectionTitle {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+}
+
+/* Extra small screens (Phones) */
+@media (max-width: 768px) {
+  .carGrid {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically on small screens */
+    gap: 24px; /* Space between car cards */
+  }
+
+  .homeContainer {
+    padding: 24px 16px; /* Smaller padding for mobile */
+  }
+
+  .sectionTitle {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .carItem {
+    width: 100%; /* Ensure cards take up full width on small screens */
+  }
+}
